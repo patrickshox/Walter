@@ -21,6 +21,9 @@ extension WidgetApp {
     let app = NSApplication.shared
     let delegate = AppDelegate(contentView: contentView)
     app.delegate = delegate
+    
+    let daemon = AccessibilityElementsStreamer.shared
+    daemon.beginStreaming()
 
     _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
   }

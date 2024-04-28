@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17C69DA82BDA1074007B0D3B /* AXSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 17C69DA72BDA1074007B0D3B /* AXSwift */; };
+		17C69DAD2BDA24D2007B0D3B /* AccessibilityElementsStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C69DAC2BDA24D2007B0D3B /* AccessibilityElementsStreamer.swift */; };
+		17C69DAF2BDA2785007B0D3B /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C69DAE2BDA2785007B0D3B /* URL+Extensions.swift */; };
 		CB71A50228C4D4DC00507E96 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71A50128C4D4DC00507E96 /* ActionButtons.swift */; };
 		CB71A50528C4D90200507E96 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71A50428C4D90200507E96 /* DummyData.swift */; };
 		CB71A50728C4DDF900507E96 /* ActionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71A50628C4DDF900507E96 /* ActionList.swift */; };
@@ -31,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17C69DAC2BDA24D2007B0D3B /* AccessibilityElementsStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityElementsStreamer.swift; sourceTree = "<group>"; };
+		17C69DAE2BDA2785007B0D3B /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		CB71A50128C4D4DC00507E96 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		CB71A50428C4D90200507E96 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		CB71A50628C4DDF900507E96 /* ActionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionList.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBABAAE628C43E1400688394 /* HotKey in Frameworks */,
+				17C69DA82BDA1074007B0D3B /* AXSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				CBABAAEA28C4403A00688394 /* Views */,
 				CBABAADA28C43D5F00688394 /* WidgetWindow.swift */,
 				CBABAADC28C43D7100688394 /* AppDelegate.swift */,
+				17C69DAC2BDA24D2007B0D3B /* AccessibilityElementsStreamer.swift */,
 				CBED2DD528C7CF290070215A /* StatusBarController.swift */,
 				CB98D45E28C28BC600F2BC03 /* Assets.xcassets */,
 				CB98D46328C28BC600F2BC03 /* Walter.entitlements */,
@@ -128,6 +135,7 @@
 				CBABAADF28C43DD400688394 /* NSWindow+Extensions.swift */,
 				CBABAAE128C43DEB00688394 /* NSApplication+Extensions.swift */,
 				CB8AEE2328DC030D00DA4EC9 /* Color+Extensions.swift */,
+				17C69DAE2BDA2785007B0D3B /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				CB98D45428C28BC100F2BC03 /* Frameworks */,
 				CB98D45528C28BC100F2BC03 /* Resources */,
 				CB8AEE2228DBDBE700DA4EC9 /* ShellScript */,
+				17C69DAB2BDA1B9A007B0D3B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -180,6 +189,7 @@
 			name = Walter;
 			packageProductDependencies = (
 				CBABAAE528C43E1400688394 /* HotKey */,
+				17C69DA72BDA1074007B0D3B /* AXSwift */,
 			);
 			productName = Walter;
 			productReference = CB98D45728C28BC100F2BC03 /* Walter.app */;
@@ -211,6 +221,7 @@
 			mainGroup = CB98D44E28C28BC100F2BC03;
 			packageReferences = (
 				CBABAAE428C43E1400688394 /* XCRemoteSwiftPackageReference "HotKey" */,
+				17C69DA62BDA1074007B0D3B /* XCRemoteSwiftPackageReference "AXSwift" */,
 			);
 			productRefGroup = CB98D45828C28BC100F2BC03 /* Products */;
 			projectDirPath = "";
@@ -234,6 +245,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17C69DAB2BDA1B9A007B0D3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tccutil reset Accessibility $PRODUCT_BUNDLE_IDENTIFIER\n";
+		};
 		CB8AEE2228DBDBE700DA4EC9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +295,7 @@
 				CBED2DDD28C7DCAA0070215A /* ContentViewModel.swift in Sources */,
 				CB98D45D28C28BC100F2BC03 /* ContentView.swift in Sources */,
 				CBED2DD428C79E3F0070215A /* Constants.swift in Sources */,
+				17C69DAD2BDA24D2007B0D3B /* AccessibilityElementsStreamer.swift in Sources */,
 				CB71A50528C4D90200507E96 /* DummyData.swift in Sources */,
 				CBABAADB28C43D5F00688394 /* WidgetWindow.swift in Sources */,
 				CB8AEE2428DC030D00DA4EC9 /* Color+Extensions.swift in Sources */,
@@ -274,6 +303,7 @@
 				CBFD6C8128CD5A6400028495 /* AnimatedHostView.swift in Sources */,
 				CBFD6C8328CD5B0000028495 /* FlippedView.swift in Sources */,
 				CBF6452228D7978F006632E0 /* WidgetApp.swift in Sources */,
+				17C69DAF2BDA2785007B0D3B /* URL+Extensions.swift in Sources */,
 				CB98D46A28C2A52B00F2BC03 /* Action.swift in Sources */,
 				CB71A50728C4DDF900507E96 /* ActionList.swift in Sources */,
 			);
@@ -481,6 +511,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		17C69DA62BDA1074007B0D3B /* XCRemoteSwiftPackageReference "AXSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tmandry/AXSwift?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
 		CBABAAE428C43E1400688394 /* XCRemoteSwiftPackageReference "HotKey" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/soffes/HotKey";
@@ -492,6 +530,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		17C69DA72BDA1074007B0D3B /* AXSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17C69DA62BDA1074007B0D3B /* XCRemoteSwiftPackageReference "AXSwift" */;
+			productName = AXSwift;
+		};
 		CBABAAE528C43E1400688394 /* HotKey */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBABAAE428C43E1400688394 /* XCRemoteSwiftPackageReference "HotKey" */;

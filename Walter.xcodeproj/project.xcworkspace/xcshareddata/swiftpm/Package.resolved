@@ -1,5 +1,15 @@
 {
+  "originHash" : "870d476df02ae89583d98f994e2776ad562f6a2573696127d3069679ce07fc67",
   "pins" : [
+    {
+      "identity" : "axswift?tab=readme-ov-file",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tmandry/AXSwift?tab=readme-ov-file",
+      "state" : {
+        "revision" : "81dcc36aced905d6464cc25e35f8d13184bbf21c",
+        "version" : "0.3.2"
+      }
+    },
     {
       "identity" : "hotkey",
       "kind" : "remoteSourceControl",
@@ -10,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
